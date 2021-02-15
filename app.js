@@ -9,6 +9,14 @@ require("dotenv").config();
 const app = express();
 const port = 3001;
 
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 app.use(bodyParser.json());
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
