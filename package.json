@@ -1,8 +1,19 @@
 {
+  "name": "marvel-comics-api",
+  "version": "1.0.0",
+  "description": "Api Marvel Comics for send email",
+  "main": "server.js",
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "surge": "^0.21.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["node", "api", "email"],
+  "author": "Marcus Vinícius Pereira de Castro",
+  "license": "ISC"
 }

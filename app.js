@@ -72,6 +72,10 @@ const getHtml = (comics) => `<html>
 </html>
 `;
 
+app.get("/", (req, res) => {
+  res.send("Deu certo");
+});
+
 app.post("/", async (req, res) => {
   let { mail, comics } = req.body;
 
@@ -100,3 +104,5 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+module.exports = app;
