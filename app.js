@@ -73,10 +73,10 @@ const getHtml = (comics) => `<html>
 `;
 
 app.get("/", (req, res) => {
-  res.send("Deu certo");
+  res.send("End Point: /sendMail - Params: {mail (recipient), comics (Marvel API comic list)}");
 });
 
-app.post("/", async (req, res) => {
+app.post("/sendMail", async (req, res) => {
   let { mail, comics } = req.body;
 
   if (!mail) res.status(400).send("The recipient is mandatory");
@@ -102,7 +102,7 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`API on`);
 });
 
 module.exports = app;
